@@ -139,6 +139,9 @@ app.controller "GameCommentsCtrl", ($scope, $dragon)->
     $scope.commentCreate = ($event)->
         $event.preventDefault()
 
+        if (not $scope.commentForm.text) or ($scope.commentForm.text.length == 0)
+          return
+
         # $dragon.create('game-comment', {
         #     text: $scope.commentForm.text
         #     # ip_address: "127.0.0.1"

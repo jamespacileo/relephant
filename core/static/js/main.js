@@ -88,6 +88,9 @@
     });
     $scope.commentCreate = function($event) {
       $event.preventDefault();
+      if ((!$scope.commentForm.text) || ($scope.commentForm.text.length === 0)) {
+        return;
+      }
       swampdragon.callRouter('send_command', 'game', {
         comment: $scope.commentForm.text,
         command: $scope.commentForm.command,
