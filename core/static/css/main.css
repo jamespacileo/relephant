@@ -43,7 +43,7 @@ html body .main-row .col-comments {
   color: #666;
 }
 .comment-box .form {
-  height: 50px;
+  height: 80px;
   overflow: hidden;
 }
 .comment-box .form textarea {
