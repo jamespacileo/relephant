@@ -3,6 +3,12 @@
 
   app = angular.module("DragonDemoApp", ['SwampDragonServices']);
 
+  app.filter('reverse', function() {
+    return function(items) {
+      return items.slice().reverse();
+    };
+  });
+
   app.controller("GameCommentsCtrl", function($scope, $dragon) {
     $scope.todoList = {};
     $scope.todoItems = [];

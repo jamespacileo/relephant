@@ -4,6 +4,10 @@ app = angular.module "DragonDemoApp", [
     'SwampDragonServices',
 ]
 
+app.filter 'reverse', ->
+  (items) ->
+    items.slice().reverse()
+
 app.controller "GameCommentsCtrl", ($scope, $dragon)->
 
     $scope.todoList = {}
