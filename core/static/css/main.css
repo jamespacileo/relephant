@@ -28,7 +28,7 @@ html body .main-row .col-comments {
   padding-left: 5px;
 }
 .comment-box .comments {
-  height: calc(100% - 80px);
+  height: calc(100% - 130px);
   overflow: auto;
 }
 .comment-box .comments ul {

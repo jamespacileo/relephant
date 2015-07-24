@@ -11,7 +11,7 @@
     $scope.playerName = "player" + $scope.playerNumber;
     $scope.comments = [];
     $scope.$watch("comments", function() {
-      return $(".comments").scrollTop = $(".comments");
+      return $(".comments")[0].scrollTop = $(".comments")[0].scrollHeight;
     });
     $scope.commentForm = {
       text: "",

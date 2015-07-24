@@ -16,7 +16,7 @@ app.controller "GameCommentsCtrl", ($scope, $dragon)->
     $scope.comments = []
 
     $scope.$watch "comments", ()->
-      $(".comments").scrollTop = $(".comments")
+      $(".comments")[0].scrollTop = $(".comments")[0].scrollHeight
 
     $scope.commentForm = {
         text: ""
