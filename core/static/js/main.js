@@ -7,6 +7,8 @@
     $scope.todoList = {};
     $scope.todoItems = [];
     $scope.channel = 'global';
+    $scope.playerNumber = Math.floor(Math.random() * 500);
+    $scope.playerName = "player" + $scope.playerNumber;
     $scope.comments = [];
     $scope.commentForm = {
       text: "",
@@ -85,7 +87,8 @@
       $event.preventDefault();
       swampdragon.callRouter('send_command', 'game', {
         comment: $scope.commentForm.text,
-        command: $scope.commentForm.command
+        command: $scope.commentForm.command,
+        player: $scope.playerName
       }, function(context, data) {
         return console.log(context, data);
       }, function(context, data) {

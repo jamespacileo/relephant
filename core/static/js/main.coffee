@@ -10,6 +10,9 @@ app.controller "GameCommentsCtrl", ($scope, $dragon)->
     $scope.todoItems = []
     $scope.channel = 'global'
 
+    $scope.playerNumber = Math.floor(Math.random() * 500)
+    $scope.playerName = "player#{$scope.playerNumber}"
+
     $scope.comments = []
 
     $scope.commentForm = {
@@ -154,6 +157,7 @@ app.controller "GameCommentsCtrl", ($scope, $dragon)->
         swampdragon.callRouter 'send_command', 'game', {
             comment: $scope.commentForm.text
             command: $scope.commentForm.command
+            player: $scope.playerName
         },
         (context, data)->
           console.log context, data

@@ -39,6 +39,9 @@ html body .main-row .col-comments {
   padding: 5px;
   font-size: 18px;
 }
+.comment-box .comments ul li .player-says {
+  color: #666;
+}
 .comment-box .form {
   height: 50px;
   overflow: hidden;

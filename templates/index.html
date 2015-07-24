@@ -48,7 +48,7 @@
             <div class="comments">
                 <h2>Comments</h2>
                 <ul>
-                    <li ng-repeat="comment in comments track by $index">player says: {{ comment.comment }} 
+                    <li ng-repeat="comment in comments track by $index"><span class="player-says">{{ comment.player }}:</span> {{ comment.comment }} 
                     <i ng-class="'fa-arrow-'+comment.command" class="fa "></i></li>
                 </ul>
             </div>

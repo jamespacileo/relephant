@@ -54,7 +54,7 @@ class GameRouter(BaseRouter):
         return super(GameRouter, self).__init__(*args, **kwargs)
     
 
-    def send_command(self, comment, command=None):
+    def send_command(self, comment, command=None, player=None):
         # self.position[0] += 1
         # self.position[1] += 1
 
@@ -88,12 +88,14 @@ class GameRouter(BaseRouter):
             'position': self.position,
             'last_comment': comment,
             'last_command': command
+
         })
         publish_data("global", {
             "type": "comment",
             'position': self.position,
             'comment': comment,
-            'command': command
+            'command': command,
+            "player": player
         })
 
     def move_player(self, direction):
