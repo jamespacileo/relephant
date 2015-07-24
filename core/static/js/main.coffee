@@ -161,5 +161,8 @@ app.controller "GameCommentsCtrl", ($scope, $dragon)->
         (context, data)->
           console.log context, data
 
+        $scope.commentForm.text = ""
+        $scope.commentForm.command = null
+
 
     return

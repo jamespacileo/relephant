@@ -83,7 +83,7 @@
     });
     $scope.commentCreate = function($event) {
       $event.preventDefault();
-      return swampdragon.callRouter('send_command', 'game', {
+      swampdragon.callRouter('send_command', 'game', {
         comment: $scope.commentForm.text,
         command: $scope.commentForm.command
       }, function(context, data) {
@@ -91,6 +91,8 @@
       }, function(context, data) {
         return console.log(context, data);
       });
+      $scope.commentForm.text = "";
+      return $scope.commentForm.command = null;
     };
   });
 

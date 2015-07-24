@@ -110,7 +110,8 @@ SWAMP_DRAGON_CONNECTION = ('swampdragon.connections.sockjs_connection.DjangoSubs
 # APP_DIRS = True
 # TEMPLATE_DIRS = DIRS = [os.path.join(BASE_DIR, 'templates')]
 # STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
-DRAGON_URL = 'http://localhost:9999/'
+DRAGON_URL = 'http://dragondemo.net:9999/'
+SWAMP_DRAGON_HOST = "0.0.0.0"
 
 # SWAMP_DRAGON_HOST = '<your_swampdragon_server_ip>' # default '127.0.0.1'
 
