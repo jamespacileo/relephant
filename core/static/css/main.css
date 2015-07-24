@@ -31,6 +31,14 @@ html body .main-row .col-comments {
   height: calc(100% - 80px);
   overflow: auto;
 }
+.comment-box .comments ul {
+  list-style: none;
+  padding: 0px;
+}
+.comment-box .comments ul li {
+  padding: 5px;
+  font-size: 18px;
+}
 .comment-box .form {
   height: 50px;
   overflow: hidden;
