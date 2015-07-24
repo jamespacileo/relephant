@@ -1,0 +1,37 @@
+html {
+  height: 100%;
+}
+html body {
+  height: 100%;
+}
+html body .main-row {
+  height: 100%;
+}
+html body .main-row .col-comments {
+  height: 100%;
+}
+.comment-box {
+  height: 100%;
+  border-left: 2px solid blue;
+  padding-left: 5px;
+}
+.comment-box .comments {
+  height: calc(100% - 80px);
+  overflow: auto;
+}
+.comment-box .form {
+  height: 50px;
+  overflow: hidden;
+}
+.comment-box .form textarea {
+  height: 100%;
+  width: calc(100% - 120px);
+  display: inline-block;
+}
+.comment-box .form .btn {
+  display: inline-block;
+  height: 100%;
+  width: 110px;
+  position: relative;
+  top: -21px;
+}

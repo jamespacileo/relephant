@@ -1,0 +1,78 @@
+{% load static swampdragon_tags %}
+<!DOCTYPE html>
+<html ng-app="DragonDemoApp">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/main.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> -->
+
+</head>
+<body>
+
+<!-- AngularJS -->
+<!-- <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.3/angular.js"></script> -->
+<script type="text/javascript" src="/static/js/angular.js"></script>
+
+
+{% swampdragon_settings %}
+<!-- <script type="text/javascript" src="/static/settings.js"></script> -->
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.js"></script>
+<script type="text/javascript" src="/static/swampdragon/js/vendor/sockjs-0.3.4.min.js"></script>
+
+<script type="text/javascript" src="/static/swampdragon/js/dist/swampdragon.js"></script>
+<script type="text/javascript" src="/static/swampdragon/js/dist/datamapper.js"></script>
+<script type="text/javascript" src="/static/swampdragon/js/angular/services.js"></script>
+
+<script type="text/javascript" src="http://canvasengine.net/cdn/dev/canvasengine-latest.all.min.js"></script>
+<script type="text/javascript" src="http://rpgjs.com/cdn/rpgjs-latest.min.js"></script>
+
+<!-- To-do app -->
+<!-- <script type="text/javascript" src="/static/controllers.js"></script> -->
+
+
+{% verbatim %}
+<div class="row main-row">
+    <div class="col-md-8 hidden-xs game-canvas-box">
+        <canvas id="game-canvas" width="670" height="480"></canvas>
+    </div>
+    <div class="col-md-4 col-xs-12 col-comments" ng-controller="GameCommentsCtrl">
+        <div class="comment-box">
+            <div class="comments">
+                <h2>Comments</h2>
+                <ul>
+                    <li ng-repeat="comment in comments track by $index">>> {{ comment.comment }} {{ comment.command }}</li>
+                </ul>
+            </div>
+                
+                <!--     <ul>
+                <li xxng-repeat="comment in gameComments">
+                    {{ comment.text }}
+                    <button type="button" ng-click="commentDone(comment)">
+                        check
+                    </button>
+                    <span ng-show="comment.done">done!</span>
+                </li>
+            </ul> -->
+                
+            <form action="" class="form comment-form">
+                <textarea class="form-control" name="" id="" cols="30" rows="10" ng-model="commentForm.text"></textarea>
+                <button class="btn btn-lg btn-success" type="button" ng-click="commentCreate($event)">
+                    Send
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endverbatim %}
+
+
+<script type="text/javascript" src="/static/js/main.js"></script>
+
+</body>
+</html>
