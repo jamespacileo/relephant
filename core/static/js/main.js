@@ -10,6 +10,9 @@
     $scope.playerNumber = Math.floor(Math.random() * 500);
     $scope.playerName = "player" + $scope.playerNumber;
     $scope.comments = [];
+    $scope.$watch("comments", function() {
+      return $(".comments").scrollTop = $(".comments");
+    });
     $scope.commentForm = {
       text: "",
       command: null

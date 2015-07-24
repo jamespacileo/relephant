@@ -70,7 +70,7 @@ class GameRouter(BaseRouter):
 
         print(now_timestamp, self.last_command_timestamp[0], (now_timestamp - self.last_command_timestamp[0]))
 
-        if command and ((now_timestamp - self.last_command_timestamp[0]) > 1000):
+        if command and ((now_timestamp - self.last_command_timestamp[0]) > 1500):
             print("triggered!")
             
             self.last_command_timestamp[0] = now_timestamp
