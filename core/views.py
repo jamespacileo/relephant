@@ -12,8 +12,7 @@ class RPGJSRedirectView(RedirectView):
 
     def get_redirect_url(self, *args, **kwargs):
         path = self.request.path
-        new_path = "/static" + path
-        return new_path
+        return f'/static{path}'
 
         # article = get_object_or_404(Article, pk=kwargs['pk'])
         # article.update_counter()
